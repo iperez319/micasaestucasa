@@ -7,7 +7,6 @@ class GuestPropertyViewPage extends Component{
         property: {}
     }
     async componentDidMount(){
-        console.log("Opening GuestPropertyViewPage")
         const { propertyId } = this.props.match.params
         
         const property = await Property.findById(propertyId)

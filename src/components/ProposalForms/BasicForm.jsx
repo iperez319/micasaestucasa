@@ -27,10 +27,8 @@ class BasicForm extends Component{
         })
         this.setState({mainText: obj.structured_formatting.main_text})
         var geocoder = new google.maps.Geocoder();
-        console.log(this.state.dataSource)
         geocoder.geocode({ 'address': e}, (results, status) => {
             if (status == google.maps.GeocoderStatus.OK) {
-              console.log(results)
               const lat = results[0].geometry.location.lat()
               const lng = results[0].geometry.location.lng()
               const city = _.find(results[0].address_components, (value) => {

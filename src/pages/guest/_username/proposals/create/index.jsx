@@ -29,7 +29,6 @@ class AdminProposalCreate extends Component {
             var city = this.refs.proposalsBasicsFormChild.getFieldProps("nearTo")["data-__meta"].originalProps.city
             var mainText = this.refs.proposalsBasicsFormChild.getFieldProps("nearTo")["data-__meta"].originalProps.mainText
             if(lat == -100){
-              console.log("Not found")
               var geocoder = new google.maps.Geocoder();
               geocoder.geocode({ 'address': this.state.streetAddress}, (results, status) => {
                   if (status == google.maps.GeocoderStatus.OK) {
@@ -111,7 +110,6 @@ class AdminProposalCreate extends Component {
       lat: this.state.lat,
       lng: this.state.lng
     })
-    console.log(newProposal)
     await newProposal.save()
 
     message.destroy()

@@ -33,7 +33,6 @@ class ProposalsGrid extends Component{
               _id: proposal._id
           });
         }
-        console.log(listData)
         return (
             <div>
               <List itemLayout="vertical" size="large"

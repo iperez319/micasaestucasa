@@ -7,7 +7,6 @@ const { TextArea } = Input;
 
 
 const CommentList = ({ comments }) => {
-    console.log(comments)
     const newComments = comments.map((value) => {
         return {author: value.author, content: <p>{value.content}</p>, datetime: moment(value.datetime).fromNow()}
     })

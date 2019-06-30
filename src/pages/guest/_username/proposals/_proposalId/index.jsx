@@ -7,7 +7,6 @@ class ViewProposal extends Component{
         proposal: {}
     }
     async componentDidMount(){
-        console.log("ProposalView", this.props.match)
         // const proposalId = this.props.match.proposalId
         const { proposalId } = this.props.match.params
         

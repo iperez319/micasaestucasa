@@ -21,10 +21,8 @@ class GuestPropertyGrid extends Component{
     }
     acceptProperty = async (propertyId) => {
         const { proposal, history } = this.props
-        console.log(this.props.properties)
         message.loading("Accepting property...", 0)
         var property = await Property.findById(propertyId)
-        console.log(property)
         var pendingProposal = _.find(property.attrs.pendingProposals, (value) => {
             return proposal._id == value.id
         })

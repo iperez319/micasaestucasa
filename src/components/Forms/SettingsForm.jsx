@@ -26,7 +26,6 @@ class SettingsForm extends Component{
       var geocoder = new google.maps.Geocoder();
       geocoder.geocode({ 'address': e}, (results, status) => {
           if (status == google.maps.GeocoderStatus.OK) {
-            console.log(results)
             const lat = results[0].geometry.location.lat()
             const lng = results[0].geometry.location.lng()
             this.setState({lat, lng})

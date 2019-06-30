@@ -27,6 +27,7 @@ class App extends Component{
     if (!userSession.isUserSignedIn() && userSession.isSignInPending()) {
       const userData = await userSession.handlePendingSignIn()
       await User.createWithCurrentUser()
+      console.log("User Created with Radiks")
       if (!userData.username) {
         throw new Error('This app requires a username')
       }
