@@ -14,11 +14,13 @@ class App extends Component{
     username: ""
   }
   componentWillMount(){
+    console.log("Starting configure")
     configure({
       // apiServer: 'http://localhost:1260',
       apiServer: 'https://arcane-shore-57140.herokuapp.com',
       userSession: this.state.userSession
     });
+    console.log("Ending Configure")
   }
   componentDidMount = async () => {
     const { userSession } = getConfig()
