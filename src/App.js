@@ -23,9 +23,11 @@ class App extends Component{
   componentDidMount = async () => {
     const { userSession } = getConfig()
     
-
+    console.log("App.js Component Did Mount")
     if (!userSession.isUserSignedIn() && userSession.isSignInPending()) {
+      console.log("Pending Sign in")
       const userData = await userSession.handlePendingSignIn()
+      console.log("Finished Signin")
       await User.createWithCurrentUser()
       console.log("User Created with Radiks")
       if (!userData.username) {
