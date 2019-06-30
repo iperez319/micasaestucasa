@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Mi Casa",
+  "description": "Decentralized Home Sharing Platform",
+  "name": "Mi Casa Es Tu Casa",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,8 +9,8 @@
       "type": "image/x-icon"
     }
   ],
-  "start_url": ".",
+  "start_url": "micasaestucasa.me",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#FF9831",
   "background_color": "#ffffff"
 }
