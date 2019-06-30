@@ -15,8 +15,8 @@ class App extends Component{
   }
   componentWillMount(){
     configure({
-      apiServer: 'http://localhost:1260',
-      // apiServer: 'https://arcane-shore-57140.herokuapp.com',
+      // apiServer: 'http://localhost:1260',
+      apiServer: 'https://arcane-shore-57140.herokuapp.com',
       userSession: this.state.userSession
     });
   }
