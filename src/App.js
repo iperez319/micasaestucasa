@@ -27,6 +27,9 @@ class App extends Component{
 
     if(userSession.isUserSignedIn()){
       console.log('User is Signed In')
+      console.log('Started with creating user')
+      await User.createWithCurrentUser()
+      console.log('Ended creating user')
     }
     
     console.log("App.js Component Did Mount")
@@ -35,13 +38,13 @@ class App extends Component{
       const userData = await userSession.handlePendingSignIn()
       console.log("Finished Signin")
       // await User.createWithCurrentUser()
-      console.log("User Created with Radiks")
+      // console.log("User Created with Radiks")
       if (!userData.username) {
         throw new Error('This app requires a username')
       }
       this.setState({username: userData.username})
       console.warn(this.state)
-      window.location = '/'
+      // window.location = '/'
     }
   }
 
