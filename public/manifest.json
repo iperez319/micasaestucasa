@@ -7,6 +7,11 @@
       "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
+    },
+    {
+      "src": "https://firebasestorage.googleapis.com/v0/b/beaverbot-7a289.appspot.com/o/custom%20%E2%80%93%201.png?alt=media&token=46bebb93-4b72-4be9-8621-903edad03099",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/png"
     }
   ],
   "start_url": "micasaestucasa.me",
