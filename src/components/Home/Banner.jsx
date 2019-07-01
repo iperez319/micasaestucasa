@@ -11,6 +11,10 @@ class Banner extends React.PureComponent {
   static defaultProps = {
     className: 'home-banner',
   }
+  handleSignIn = () => {
+    const { userSession } = getConfig()
+    userSession.redirectToSignIn()
+  }
   render() {
     const { className } = this.props;
     return (
@@ -25,7 +29,7 @@ class Banner extends React.PureComponent {
               <Button
                 type="primary"
                 onClick={() => {
-                window.location.href = '/activity/home';
+                this.handleSignIn;
               }}
               >
                 Get Started
