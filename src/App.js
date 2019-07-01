@@ -30,6 +30,15 @@ class App extends Component{
       console.log("Pending Sign in")
       const userData = await userSession.handlePendingSignIn()
       console.log("Finished Signin")
+      var x = true
+      while(x){
+        try {
+          await User.createWithCurrentUser()
+          x = false;
+        } catch (error) {
+          console.log("Error again")
+        }
+      }
       await User.createWithCurrentUser()
       console.log("User Created with Radiks")
       if (!userData.username) {
