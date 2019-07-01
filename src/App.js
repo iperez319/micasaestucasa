@@ -17,7 +17,8 @@ class App extends Component{
     console.log("Starting configure")
     configure({
       // apiServer: 'http://localhost:1261',
-      apiServer: 'https://arcane-shore-57140.herokuapp.com',
+      // apiServer: 'https://arcane-shore-57140.herokuapp.com',
+      apiServer: 'https://groovy-gerbil.glitch.me',
       userSession: this.state.userSession
     });
     console.log("Ending Configure")
