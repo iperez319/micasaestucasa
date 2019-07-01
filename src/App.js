@@ -30,7 +30,7 @@ class App extends Component{
       console.log("Pending Sign in")
       const userData = await userSession.handlePendingSignIn()
       console.log("Finished Signin")
-      console.log(await User.loadUserData())
+      console.log(User.currentUser())
       console.log("User Created with Radiks")
       if (!userData.username) {
         throw new Error('This app requires a username')
