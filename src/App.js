@@ -16,8 +16,8 @@ class App extends Component{
   componentWillMount(){
     console.log("Starting configure")
     configure({
-      // apiServer: 'http://localhost:1260',
-      apiServer: 'https://arcane-shore-57140.herokuapp.com',
+      apiServer: 'http://localhost:1261',
+      // apiServer: 'https://arcane-shore-57140.herokuapp.com',
       userSession: this.state.userSession
     });
     console.log("Ending Configure")
@@ -30,14 +30,14 @@ class App extends Component{
       console.log("Pending Sign in")
       const userData = await userSession.handlePendingSignIn()
       console.log("Finished Signin")
-      console.log(User.currentUser())
+      await User.createWithCurrentUser()
       console.log("User Created with Radiks")
       if (!userData.username) {
         throw new Error('This app requires a username')
       }
       this.setState({username: userData.username})
       console.warn(this.state)
-      // window.location = '/'
+      window.location = '/'
     }
   }
 

@@ -158,7 +158,9 @@ class AdminPropertyCreate extends Component {
         beds: this.state.bed,
         pendingProposals: new Array()
       })
+      console.log(newProperty)
       await newProperty.save()
+      console.log("done")
       message.destroy()
       message.success("Created property")
       history.push(`/host/${username}/properties`)
