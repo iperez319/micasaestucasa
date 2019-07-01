@@ -52,7 +52,7 @@ class App extends Component{
           <Navbar userSession={this.state.userSession} username={this.state.username}/>
               <div>
                 {
-                  userSession.isUserSignedIn() == undefined
+                  userSession.isUserSignedIn()
                     ? <div style={{padding: "25px"}}><Routes/></div>
                     : <div style={{paddingTop: "10px"}}><Home/></div>
                 }
