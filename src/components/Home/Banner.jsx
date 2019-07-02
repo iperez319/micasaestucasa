@@ -29,8 +29,8 @@ class Banner extends React.PureComponent {
             <span key="button">
               <Button
                 type="primary"
-                //onClick={this.handleSignIn}
-                onClick={async () => await User.createWithCurrentUser()}
+                onClick={this.handleSignIn}
+                // onClick={async () => await User.createWithCurrentUser()}
               >
                 Get Started
               </Button>
