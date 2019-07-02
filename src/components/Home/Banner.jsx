@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import QueueAnim from 'rc-queue-anim';
 import { Button } from 'antd';
 import BannerImage from './BannerImage';
-import { getConfig } from 'radiks'
+import { getConfig, User } from 'radiks'
 
 class Banner extends React.PureComponent {
   static propTypes = {
@@ -29,7 +29,8 @@ class Banner extends React.PureComponent {
             <span key="button">
               <Button
                 type="primary"
-                onClick={this.handleSignIn}
+                //onClick={this.handleSignIn}
+                onClick={async () => await User.createWithCurrentUser()}
               >
                 Get Started
               </Button>
